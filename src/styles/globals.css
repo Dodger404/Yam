@@ -8,79 +8,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-family-base: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --font-family-base: 'Inter', Arial, Helvetica, sans-serif;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.login-page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url('../images/bgImage.jpg') no-repeat center center / cover;
+  font-family: var(--font-family-base);
 }
 
 @layer base {
   .font-roboto {
     font-family: 'Roboto', sans-serif;
-  }
-
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-@layer components {
-  /* Заголовки */
-  .h1 {
-    @apply text-[30px] leading-[36px] font-bold font-roboto;
-  }
-
-  .h2 {
-    @apply text-[24px] leading-[32px] font-bold font-roboto;
-  }
-
-  .h2-regular {
-    @apply text-[24px] leading-[32px] font-normal font-roboto;
-  }
-
-  .h3 {
-    @apply text-[20px] leading-[28px] font-bold font-roboto;
-  }
-
-  .h3-mobile {
-    @apply text-[16px] leading-[24px] font-bold font-roboto;
-  }
-
-  /* Основной текст */
-  .text-base {
-    @apply text-[16px] leading-[24px] font-normal font-inter;
-  }
-
-  .text-base-bold {
-    @apply text-[16px] leading-[24px] font-bold font-inter;
-  }
-
-  .text-sm {
-    @apply text-[14px] leading-[20px] font-normal font-inter;
-  }
-
-  .text-sm-bold {
-    @apply text-[14px] leading-[20px] font-bold font-inter;
-  }
-
-  .text-xs {
-    @apply text-[12px] leading-[16px] font-normal font-inter;
   }
 }
