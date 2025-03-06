@@ -2,7 +2,7 @@ import { Restaurant } from '@/data/restaurants';
 import { Star } from '@/components/star';
 import { DiscountIcon } from '@/components/discount_icon';
 
-const RestaurantCard: React.FC<Restaurant> = ({ name, rating, kitchenType, time, price, image }) => {
+const RestaurantCard: React.FC<Restaurant> = ({ name, rating, description, time, price, image }) => {
   return (
     <div className="bg-white rounded-md shadow-md px-4 pt-2 pb-4 flex flex-col gap-1">
       <h3 className="text-base font-bold text-center font-roboto text-gray-800">{name}</h3>
@@ -15,7 +15,7 @@ const RestaurantCard: React.FC<Restaurant> = ({ name, rating, kitchenType, time,
         </div>
         <p className="text-gray-600 text-xs">Тип кухни</p>
       </div>
-      <p className="text-gray-800 text-xs text-left">{kitchenType}</p>
+      <p className="text-gray-800 text-xs text-left">{description}</p>
       <div className="flex justify-between text-xs text-gray-600 gap-4 mt-1">
         <span className="flex items-center">{time}</span>
         <span className="flex items-center">

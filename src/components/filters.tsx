@@ -2,7 +2,7 @@ import { Listbox } from '@headlessui/react';
 import { useState } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 
-const kitchenTypes = ['Все', 'Традиционная кухня', 'Современная кухня', 'Морепродукты'];
+const kitchenTypes = ['Все', 'Славянская', 'Европейская', 'Русская', 'Традиционная русская', 'Барбекю', 'Азиатская', 'Кондитерская', 'Рыбная'];
 const ratings = ['Все', '5 звёзд', '4 звезды', '3 звезды'];
 const deliveryTimes = ['Все', 'До 30 минут', '30–40 минут', '40–50 минут'];
 
@@ -36,7 +36,7 @@ export default function Filters() {
                 <Listbox.Option
                   key={option}
                   value={option}
-                  className={({ active }) => `cursor-pointer select-none py-2 pl-4 ${active ? 'bg-gray-100' : ''}`}
+                  className={({ active }) => `cursor-pointer select-none py-2 pl-4 ${active ? 'bg-gray-100 text-blue-500' : ''}`}
                 >
                   {option}
                 </Listbox.Option>
