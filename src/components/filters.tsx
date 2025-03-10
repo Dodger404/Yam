@@ -49,10 +49,16 @@ export default function Filters() {
   );
 
   return (
-    <div className="flex flex-col gap-2 w-full">
-      {renderListbox('Тип кухни', kitchenTypes, selectedKitchenType, setSelectedKitchenType, 'kitchenType')}
-      {renderListbox('Рейтинг ресторана', ratings, selectedRating, setSelectedRating, 'rating')}
-      {renderListbox('Время доставки', deliveryTimes, selectedTime, setSelectedTime, 'time')}
+    <div className="flex flex-col gap-2 w-full lg:flex-row lg:gap-1.5 lg:items-start">
+      <div className="lg:w-[200px]">
+        {renderListbox('Тип кухни', kitchenTypes, selectedKitchenType, setSelectedKitchenType, 'kitchenType')}
+      </div>
+      <div className="lg:w-[200px]">
+        {renderListbox('Рейтинг ресторана', ratings, selectedRating, setSelectedRating, 'rating')}
+      </div>
+      <div className="lg:w-[200px]">
+        {renderListbox('Время доставки', deliveryTimes, selectedTime, setSelectedTime, 'time')}
+      </div>
     </div>
-  );
+  );  
 }

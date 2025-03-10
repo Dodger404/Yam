@@ -13,7 +13,7 @@ const tabs = [
 
 export default function Tabs({ activeTab, onChangeTab }: TabsProps) {
     return (
-        <div className="grid grid-flow-col grid-cols-[1fr_1fr_2fr] gap-4 border-b border-gray-200 w-full">
+        <div className="grid grid-cols-[1fr_1fr_2fr] gap-4 border-b border-gray-200 w-full md:grid-cols-3 lg:hidden">
             {tabs.map(({ id, label }) => (
                 <button
                     key={id}

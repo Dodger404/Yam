@@ -8,9 +8,7 @@ export default function HeaderMobile() {
             <div className="w-7 h-7 flex items-center justify-center">
                 <BMenu className="w-6 h-6" />
             </div>
-            <div className="flex-1 flex justify-center">
-                <Logo className="w-12 h-6" />
-            </div>
+                <Logo />
             <div className="w-7 h-7 flex items-center justify-center">
                 <Basket className="w-6 h-6" />
             </div>
