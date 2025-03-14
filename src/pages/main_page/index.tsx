@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '@/styles/globals.css';
 import HeaderMobile from '@/components/header_mobile';
 import Tabs from '@/components/tabs';
 import Filters from '@/components/filters';
