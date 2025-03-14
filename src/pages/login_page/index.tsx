@@ -1,5 +1,3 @@
-import '@/styles/globals.css'
-
 export default function LoginPage() {
   return (
       <div className="min-h-screen flex items-center justify-center bg-[url('/images/bgImage.jpg')] bg-fixed bg-cover bg-center">
