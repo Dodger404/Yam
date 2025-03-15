@@ -1,11 +1,12 @@
 import { z } from 'zod';
+
 import { dishInfoSchema } from './dish';
 import { ratingSchema } from './rating';
 
 export const orderItemSchema = z.object({
   dish: dishInfoSchema,
   count: z.number().positive().int(),
-})
+});
 
 export type OrderItem = z.infer<typeof orderItemSchema>; // Узнать у наставника
 
@@ -31,6 +32,6 @@ export const orderRateSchema = z.object({
   restaurantRate: ratingSchema,
   deliveryRate: ratingSchema,
   feedback: z.string().max(250),
-})
+});
 
 export type OrderRate = z.infer<typeof orderRateSchema>;

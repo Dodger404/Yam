@@ -1,8 +1,18 @@
-import { Listbox } from '@headlessui/react';
 import { useState } from 'react';
+import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 
-const kitchenTypes = ['Все', 'Славянская', 'Европейская', 'Русская', 'Традиционная русская', 'Барбекю', 'Азиатская', 'Кондитерская', 'Рыбная'];
+const kitchenTypes = [
+  'Все',
+  'Славянская',
+  'Европейская',
+  'Русская',
+  'Традиционная русская',
+  'Барбекю',
+  'Азиатская',
+  'Кондитерская',
+  'Рыбная',
+];
 const ratings = ['Все', '5 звёзд', '4 звезды', '3 звезды'];
 const deliveryTimes = ['Все', 'До 30 минут', '30–40 минут', '40–50 минут'];
 
@@ -12,31 +22,36 @@ export default function Filters() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [openList, setOpenList] = useState<string | null>(null);
 
-  const renderListbox = (placeholder: string, options: string[], selected: string | null, setSelected: (value: string) => void, listName: string) => (
+  const renderListbox = (
+    placeholder: string,
+    options: string[],
+    selected: string | null,
+    setSelected: (value: string) => void,
+    listName: string
+  ) => (
     <div className="relative w-full">
-      <Listbox
-        value={selected}
-        onChange={setSelected}
-      >
+      <Listbox value={selected} onChange={setSelected}>
         {({ open }) => (
           <>
             <Listbox.Button
-              className={`w-full py-2 pl-3 pr-10 text-left bg-white border rounded-md text-sm cursor-pointer ${open ? 'border-blue-500' : 'border-gray-300'}`}
               onClick={() => setOpenList(open ? null : listName)}
+              className={`w-full cursor-pointer rounded-md border bg-white py-2 pl-3 pr-10 text-left text-sm ${open ? 'border-blue-500' : 'border-gray-300'}`}
             >
               {selected || placeholder}
               {open ? (
-                <ChevronUpIcon className="absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 text-gray-500" />
+                <ChevronUpIcon className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500" />
               ) : (
-                <ChevronDownIcon className="absolute right-2 top-1/2 transform -translate-y-1/2 w-7 h-7 text-gray-500" />
+                <ChevronDownIcon className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500" />
               )}
             </Listbox.Button>
-            <Listbox.Options className="absolute w-full mt-1 bg-white rounded-md shadow-lg max-h-60 overflow-auto z-50">
-              {options.map((option) => (
+            <Listbox.Options className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white shadow-lg">
+              {options.map(option => (
                 <Listbox.Option
                   key={option}
                   value={option}
-                  className={({ active }) => `cursor-pointer select-none py-2 pl-4 ${active ? 'bg-gray-100 text-blue-500' : ''}`}
+                  className={({ active }) =>
+                    `cursor-pointer select-none py-2 pl-4 ${active ? 'bg-gray-100 text-blue-500' : ''}`
+                  }
                 >
                   {option}
                 </Listbox.Option>
@@ -49,9 +64,15 @@ export default function Filters() {
   );
 
   return (
-    <div className="flex flex-col gap-2 w-full lg:flex-row lg:gap-1.5 lg:items-start">
+    <div className="flex w-full flex-col gap-2 lg:flex-row lg:items-start lg:gap-1.5">
       <div className="lg:w-[200px]">
-        {renderListbox('Тип кухни', kitchenTypes, selectedKitchenType, setSelectedKitchenType, 'kitchenType')}
+        {renderListbox(
+          'Тип кухни',
+          kitchenTypes,
+          selectedKitchenType,
+          setSelectedKitchenType,
+          'kitchenType'
+        )}
       </div>
       <div className="lg:w-[200px]">
         {renderListbox('Рейтинг ресторана', ratings, selectedRating, setSelectedRating, 'rating')}
@@ -60,5 +81,5 @@ export default function Filters() {
         {renderListbox('Время доставки', deliveryTimes, selectedTime, setSelectedTime, 'time')}
       </div>
     </div>
-  );  
+  );
 }
