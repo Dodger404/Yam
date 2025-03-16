@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function LoginPage() {
   return (
     <div className="relative flex min-h-screen items-center justify-center bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-[url('/images/bgImage.jpg')]">
@@ -9,17 +11,16 @@ export default function LoginPage() {
             </h2>
             <form className="flex flex-col gap-3.5 lg:gap-4">
               <div className="flex flex-col gap-0.5 lg:gap-1">
-                <label className="hidden text-xs text-gray-500 lg:block" htmlFor="email">
+                <label className="text-xs text-gray-500" htmlFor="email">
                   Email
-                </label>
-                <label className="text-xs text-gray-500 lg:hidden" htmlFor="email">
-                  Email или логин
                 </label>
                 <input
                   type="email"
                   id="email"
                   placeholder="ivanov@yandex.ru"
-                  className="w-full rounded border p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  required
+                  autoComplete="username"
+                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
                 />
               </div>
               <div className="flex flex-col gap-0.5 lg:gap-1">
@@ -30,7 +31,9 @@ export default function LoginPage() {
                   type="password"
                   id="password"
                   placeholder="******"
-                  className="w-full rounded border p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  required
+                  autoComplete="current-password"
+                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
                 />
                 <a href="#" className="self-end text-sm text-gray-500 lg:text-base">
                   Забыли пароль?
@@ -47,9 +50,9 @@ export default function LoginPage() {
           <div className="absolute bottom-1.5 flex flex-col gap-1 lg:static lg:gap-2">
             <p className="hidden text-sm text-gray-500 lg:block">У вас ещё нет аккаунта?</p>
             <p className="text-xs text-gray-500 lg:hidden">Нет аккаунта?</p>
-            <a href="#" className="text-sm font-bold text-blue-600 hover:underline">
+            <Link href="/registration" className="text-sm font-bold text-blue-600 hover:underline">
               Зарегистрироваться
-            </a>
+            </Link>
           </div>
         </div>
       </div>
