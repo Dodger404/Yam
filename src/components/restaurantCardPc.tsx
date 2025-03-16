@@ -2,7 +2,7 @@ import { DiscountIcon } from '@/components/icons/discountIcon';
 import { Star } from '@/components/icons/star';
 import { Restaurant } from '@/data/restaurants';
 
-const RestaurantCardPC: React.FC<Restaurant> = ({
+export const RestaurantCardPC: React.FC<Restaurant> = ({
   name,
   rating,
   description,
@@ -47,5 +47,3 @@ const RestaurantCardPC: React.FC<Restaurant> = ({
     </div>
   );
 };
-
-export default RestaurantCardPC;

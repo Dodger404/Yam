@@ -17,8 +17,8 @@ export default function MainPage() {
     <div className="min-h-screen bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-gray-100 lg:bg-none">
       <HeaderMobile />
       <Header />
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-7 px-5 py-5 lg:px-12 lg:py-8">
-        <h1 className="font-roboto text-center text-2xl font-bold text-gray-800 lg:text-3xl">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-7 px-5 py-5 lg:items-center lg:px-12 lg:py-8">
+        <h1 className="font-roboto text-2xl font-bold text-gray-800 lg:text-center lg:text-3xl">
           Все рестораны
         </h1>
         <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
