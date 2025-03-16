@@ -1,5 +1,5 @@
-import RestaurantCard from '@/components/restaurantCard';
-import RestaurantCardPC from '@/components/restaurantCardPc';
+import { RestaurantCard } from '@/components/restaurantCard';
+import { RestaurantCardPC } from '@/components/restaurantCardPc';
 import { restaurants } from '@/data/restaurants';
 
 export const RestaurantList = () => {
