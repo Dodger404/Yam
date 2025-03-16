@@ -15,23 +15,15 @@ export default function MainPage() {
 
   return (
     <div className="min-h-screen bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-gray-100 lg:bg-none">
-      <div className="block lg:hidden">
-        <HeaderMobile />
-      </div>
-      <div className="hidden lg:block">
-        <Header />
-      </div>
+      <HeaderMobile />
+      <Header />
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-7 px-5 py-5 lg:px-12 lg:py-8">
         <h1 className="font-roboto text-center text-2xl font-bold text-gray-800 lg:text-3xl">
           Все рестораны
         </h1>
         <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
-        <div className="w-full lg:self-start">
-          <Filters />
-        </div>
-        <div className="block lg:hidden">
-          <RestaurantList />
-        </div>
+        <Filters />
+        <RestaurantList />
         <RestaurantListPC />
         <h2 className="font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block">
           Недавно заказывали

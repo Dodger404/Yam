@@ -4,7 +4,7 @@ import { Logo } from '@/components/icons/logo';
 
 export default function HeaderMobile() {
   return (
-    <header className="flex items-center justify-between rounded-b-xl bg-white p-4 pb-3 pl-10 pr-10 pt-2">
+    <header className="flex items-center justify-between rounded-b-xl bg-white p-4 pb-3 pl-10 pr-10 pt-2 lg:hidden">
       <div className="flex h-7 w-7 items-center justify-center">
         <BMenu className="h-6 w-6" />
       </div>

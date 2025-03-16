@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 
+import { cn } from '@/utils/cn';
+
 const kitchenTypes = [
   'Все',
   'Славянская',
@@ -35,7 +37,10 @@ export default function Filters() {
           <>
             <Listbox.Button
               onClick={() => setOpenList(open ? null : listName)}
-              className={`w-full cursor-pointer rounded-md border bg-white py-2 pl-3 pr-10 text-left text-sm ${open ? 'border-blue-500' : 'border-gray-300'}`}
+              className={cn(
+                'w-full cursor-pointer rounded-md border bg-white py-2 pl-3 pr-10 text-left text-sm',
+                open ? 'border-blue-500' : 'border-gray-300'
+              )}
             >
               {selected || placeholder}
               {open ? (
@@ -50,7 +55,10 @@ export default function Filters() {
                   key={option}
                   value={option}
                   className={({ active }) =>
-                    `cursor-pointer select-none py-2 pl-4 ${active ? 'bg-gray-100 text-blue-500' : ''}`
+                    cn(
+                      'cursor-pointer select-none py-2 pl-4 text-sm',
+                      active && 'bg-gray-100 text-blue-500'
+                    )
                   }
                 >
                   {option}
@@ -64,7 +72,7 @@ export default function Filters() {
   );
 
   return (
-    <div className="flex w-full flex-col gap-2 lg:flex-row lg:items-start lg:gap-1.5">
+    <div className="flex w-full flex-col gap-2 lg:flex-row lg:gap-1.5 lg:self-start">
       <div className="lg:w-[200px]">
         {renderListbox(
           'Тип кухни',

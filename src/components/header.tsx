@@ -8,7 +8,7 @@ import { Storage } from '@/components/icons/storage';
 
 export default function Header() {
   return (
-    <header className="flex w-full items-center justify-between border-b border-gray-300 bg-white px-6 py-4">
+    <header className="hidden lg:flex lg:w-full lg:items-center lg:justify-between lg:border-b lg:border-gray-300 lg:bg-white lg:px-6 lg:py-4">
       <LogoPC />
       <nav className="ml-auto flex items-center gap-6">
         <a

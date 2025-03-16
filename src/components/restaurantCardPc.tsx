@@ -25,7 +25,7 @@ const RestaurantCardPC: React.FC<Restaurant> = ({
           />
         ))}
       </div>
-      <p className="text-sm text-gray-800">{description}</p>
+      <p className="w-full text-sm text-gray-800">{description}</p>
       <div className="flex w-full justify-between text-sm text-gray-600">
         <span>Тип кухни:</span>
         <span>{kitchenType}</span>
