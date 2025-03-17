@@ -12,10 +12,10 @@ export const RestaurantCardPC: React.FC<Restaurant> = ({
   image,
 }) => {
   return (
-    <div className="flex min-w-[14rem] max-w-[20rem] flex-grow flex-col items-start gap-1.5 rounded-md bg-white px-4 pb-4 pt-2 text-left shadow-md">
+    <div className="flex min-w-[14rem] max-w-[20rem] flex-grow flex-col items-start gap-1.5 rounded-md bg-white px-4 pb-4 pt-1.5 text-left shadow-md">
       <h3 className="font-roboto w-full text-center text-xl font-bold text-gray-800">{name}</h3>
-      <img src={image} alt={name} className="h-28 w-full rounded-lg object-cover" />
-      <div className="flex items-center space-x-1">
+      <img src={image} alt={name} className="h-[7.5rem] w-full rounded-lg object-cover" />
+      <div className="flex items-center space-x-2">
         {Array.from({ length: 5 }).map((_, index) => (
           <Star
             key={index}
