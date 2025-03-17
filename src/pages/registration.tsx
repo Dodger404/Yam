@@ -16,9 +16,13 @@ export default function RegistrationPage() {
                   type="text"
                   id="firstName"
                   placeholder="Ярополк"
+                  minLength={2}
+                  maxLength={50}
                   required
                   autoComplete="given-name"
-                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  pattern="^[a-zA-Zа-яА-ЯёЁ\-]+$"
+                  data-error-message="Имя должно содержать только буквы и знак дефиса"
+                  className="w-full rounded border border-gray-300 p-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base"
                 />
               </div>
               <div className="flex flex-col gap-0.5 lg:gap-1">
@@ -29,9 +33,13 @@ export default function RegistrationPage() {
                   type="text"
                   id="lastName"
                   placeholder="Иванов"
+                  minLength={2}
+                  maxLength={50}
                   required
                   autoComplete="family-name"
-                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  pattern="^[a-zA-Zа-яА-ЯёЁ\-]+$"
+                  data-error-message="Фамилия должна содержать только буквы и знак дефиса"
+                  className="w-full rounded border border-gray-300 p-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base"
                 />
               </div>
               <div className="flex flex-col gap-0.5 lg:gap-1">
@@ -42,9 +50,13 @@ export default function RegistrationPage() {
                   type="email"
                   id="email"
                   placeholder="ivanov@yandex.ru"
+                  minLength={5}
+                  maxLength={100}
                   required
                   autoComplete="username"
-                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  data-error-message="Введите корректный email (например, ivanov@yandex.ru)"
+                  className="w-full rounded border border-gray-300 p-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base"
                 />
               </div>
               <div className="flex flex-col gap-0.5 lg:gap-1">
@@ -55,8 +67,12 @@ export default function RegistrationPage() {
                   type="password"
                   id="password"
                   placeholder="******"
+                  minLength={6}
+                  maxLength={100}
                   required
-                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$"
+                  data-error-message="Пароль должен содержать минимум 6 символов, хотя бы одну букву и одну цифру"
+                  className="w-full rounded border border-gray-300 p-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base"
                 />
               </div>
               <div className="flex flex-col gap-0.5 lg:gap-1">
@@ -67,14 +83,18 @@ export default function RegistrationPage() {
                   type="password"
                   id="passwordConfirm"
                   placeholder="******"
+                  minLength={6}
+                  maxLength={100}
                   required
-                  className="w-full rounded border border-gray-300 p-1.5 placeholder:text-sm lg:placeholder:text-base"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$"
+                  data-error-message="Пароль должен содержать минимум 6 символов, хотя бы одну букву и одну цифру"
+                  className="w-full rounded border border-gray-300 p-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base"
                 />
               </div>
             </form>
             <button
               type="submit"
-              className="w-full rounded-lg bg-blue-500 py-2 text-base font-bold text-gray-100"
+              className="w-full rounded-lg bg-blue-500 py-2 text-base font-bold text-gray-100 hover:bg-blue-600 hover:text-gray-100 active:bg-blue-700 active:text-white"
             >
               Зарегистрироваться
             </button>
