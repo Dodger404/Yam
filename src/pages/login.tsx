@@ -58,7 +58,7 @@ export default function LoginPage() {
               Войти
             </button>
           </div>
-          <div className="absolute bottom-10 flex flex-col gap-1 py-5 lg:static lg:gap-2 lg:py-0">
+          <div className="absolute bottom-1.5 flex flex-col gap-1 pb-[env(safe-area-inset-bottom)] lg:static lg:gap-2">
             <p className="hidden text-sm text-gray-500 lg:block">У вас ещё нет аккаунта?</p>
             <p className="text-xs text-gray-500 lg:hidden">Нет аккаунта?</p>
             <Link href="/registration" className="text-sm font-bold text-blue-600 hover:underline">
