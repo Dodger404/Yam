@@ -23,13 +23,13 @@ export default function BurgerMenu() {
         </Link>
       </div>
       <nav className="flex w-full flex-col gap-6 px-5">
-        <a href="#" className="flex flex-col items-start gap-2">
+        <Link href="/" className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
             <HomeIcon className="h-6 w-6" />
             <p className="text-base text-gray-800">Главная</p>
           </div>
           <div className="h-px w-full bg-gray-300"></div>
-        </a>
+        </Link>
         <a href="#" className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
             <Car className="h-6 w-6" />
@@ -44,13 +44,13 @@ export default function BurgerMenu() {
           </div>
           <div className="h-px w-full bg-gray-300"></div>
         </a>
-        <a href="#" className="flex flex-col items-start gap-2">
+        <Link href="/login" className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
             <UserIcon className="h-6 w-6" />
             <p className="text-base text-gray-800">Профиль</p>
           </div>
           <div className="h-px w-full bg-gray-300"></div>
-        </a>
+        </Link>
         <a href="#" className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
             <Storage className="h-6 w-6" />
