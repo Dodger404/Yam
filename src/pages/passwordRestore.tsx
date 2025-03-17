@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function LoginPage() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-[url('/images/bgImage.jpg')]">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:overflow-visible lg:bg-[url('/images/bgImage.jpg')]">
       <div className="mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg">
         <div className="flex flex-col gap-9 px-5 py-6 lg:px-6 lg:py-10">
           <div className="flex flex-col gap-7">
@@ -39,7 +39,7 @@ export default function LoginPage() {
               Восстановить
             </button>
           </div>
-          <div className="absolute bottom-6 flex flex-col gap-1 lg:static lg:gap-2">
+          <div className="absolute bottom-1.5 flex flex-col gap-1 lg:static lg:gap-2">
             <p className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</p>
             <Link href="/login" className="text-sm font-bold text-blue-600 hover:underline">
               Войти в аккаунт
