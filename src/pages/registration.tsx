@@ -99,7 +99,7 @@ export default function RegistrationPage() {
               Зарегистрироваться
             </button>
           </div>
-          <div className="absolute bottom-1.5 flex flex-col gap-1 lg:static lg:gap-2">
+          <div className="absolute bottom-6 flex flex-col gap-1 lg:static lg:gap-2">
             <p className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</p>
             <Link href="/login" className="text-sm font-bold text-blue-600 hover:underline">
               Войти в аккаунт
