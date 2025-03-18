@@ -4,10 +4,10 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { LogoPC } from '@/components/icons/logoPC';
 import { User } from '@/components/icons/user';
 
-export default function Header() {
+export default function HeaderLog() {
   return (
     <header className="hidden lg:flex lg:w-full lg:items-center lg:justify-between lg:border-b lg:border-gray-300 lg:bg-white lg:px-6 lg:py-3.5">
-      <LogoPC />
+      <LogoPC aria-hidden="true" />
       <div
         role="search"
         className="group relative flex min-w-[200px] max-w-lg flex-1 rounded-lg border-2 border-blue-500 focus-within:border-blue-700"
@@ -27,16 +27,14 @@ export default function Header() {
         </button>
       </div>
       <div className="flex items-center gap-6">
-        <Link href="/login">
-          <button type="button" className="group flex flex-col items-center gap-1">
-            <User
-              aria-hidden="true"
-              className="h-6 w-6 stroke-current text-gray-800 group-hover:text-blue-600 group-active:text-blue-700"
-            />
-            <p className="text-xs text-gray-800 group-hover:text-blue-600 group-active:text-blue-700">
-              Войти
-            </p>
-          </button>
+        <Link href="/login" className="group flex flex-col items-center gap-1">
+          <User
+            aria-hidden="true"
+            className="h-6 w-6 stroke-current text-gray-800 group-hover:text-blue-600 group-active:text-blue-700"
+          />
+          <span className="text-xs text-gray-800 group-hover:text-blue-600 group-active:text-blue-700">
+            Войти
+          </span>
         </Link>
         <Link href="/registration">
           <button

@@ -16,6 +16,7 @@ export default function Tabs({ activeTab, onChangeTab }: TabsProps) {
     <div className="grid w-full grid-cols-[1fr_1fr_2fr] gap-4 border-b border-gray-200 md:grid-cols-3 lg:hidden">
       {tabs.map(({ id, label }) => (
         <button
+          type="button"
           key={id}
           onClick={() => onChangeTab(id)}
           className={`relative text-sm ${activeTab === id ? 'font-bold text-blue-500' : 'text-gray-500'}`}

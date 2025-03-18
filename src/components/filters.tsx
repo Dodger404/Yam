@@ -44,9 +44,15 @@ export default function Filters() {
             >
               {selected || placeholder}
               {open ? (
-                <ChevronUpIcon className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500" />
+                <ChevronUpIcon
+                  aria-hidden="true"
+                  className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500"
+                />
               ) : (
-                <ChevronDownIcon className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500" />
+                <ChevronDownIcon
+                  aria-hidden="true"
+                  className="absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500"
+                />
               )}
             </Listbox.Button>
             <Listbox.Options className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white shadow-lg">

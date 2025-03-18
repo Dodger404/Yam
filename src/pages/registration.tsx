@@ -6,8 +6,13 @@ export default function RegistrationPage() {
       <div className="mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg">
         <div className="flex flex-col gap-9 px-5 py-6 lg:px-6 lg:py-10">
           <div className="flex flex-col gap-6">
-            <h2 className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl">Регистрация</h2>
-            <form className="flex flex-col gap-3.5 lg:gap-4">
+            <h2
+              id="registration"
+              className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl"
+            >
+              Регистрация
+            </h2>
+            <form aria-labelledby="registration" className="flex flex-col gap-3.5 lg:gap-4">
               <div className="flex flex-col gap-0.5 lg:gap-1">
                 <label className="text-xs text-gray-500" htmlFor="firstName">
                   Имя
@@ -100,7 +105,7 @@ export default function RegistrationPage() {
             </button>
           </div>
           <div className="flex flex-col gap-1 lg:gap-2">
-            <p className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</p>
+            <span className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</span>
             <Link href="/login" className="text-sm font-bold text-blue-600 hover:underline">
               Войти в аккаунт
             </Link>
