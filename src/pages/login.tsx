@@ -6,10 +6,10 @@ export default function LoginPage() {
       <div className="mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg">
         <div className="flex flex-col gap-9 px-5 py-6 lg:px-6 lg:py-10">
           <div className="flex flex-col gap-6">
-            <h2 className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl">
+            <h2 id="login" className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl">
               Вход в аккаунт
             </h2>
-            <form className="flex flex-col gap-3.5 lg:gap-4">
+            <form aria-labelledby="login" className="flex flex-col gap-3.5 lg:gap-4">
               <div className="flex flex-col gap-0.5 lg:gap-1">
                 <label className="text-xs text-gray-500" htmlFor="email">
                   Email
@@ -45,6 +45,7 @@ export default function LoginPage() {
                 />
                 <Link
                   href="/passwordRestore"
+                  aria-label="Перейти на страницу восстановления пароля"
                   className="self-end text-sm text-gray-500 hover:underline lg:text-base"
                 >
                   Забыли пароль?
@@ -59,9 +60,13 @@ export default function LoginPage() {
             </button>
           </div>
           <div className="flex flex-col gap-1 lg:gap-2">
-            <p className="hidden text-sm text-gray-500 lg:block">У вас ещё нет аккаунта?</p>
-            <p className="text-xs text-gray-500 lg:hidden">Нет аккаунта?</p>
-            <Link href="/registration" className="text-sm font-bold text-blue-600 hover:underline">
+            <span className="hidden text-sm text-gray-500 lg:block">У вас ещё нет аккаунта?</span>
+            <span className="text-xs text-gray-500 lg:hidden">Нет аккаунта?</span>
+            <Link
+              href="/registration"
+              aria-label="Перейти на страницу регистрации"
+              className="text-sm font-bold text-blue-600 hover:underline"
+            >
               Зарегистрироваться
             </Link>
           </div>

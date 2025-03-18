@@ -6,14 +6,17 @@ export default function LoginPage() {
       <div className="mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg">
         <div className="flex flex-col gap-9 px-5 py-6 lg:px-6 lg:py-10">
           <div className="flex flex-col gap-7">
-            <h2 className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl">
+            <h2
+              id="reset-password"
+              className="font-roboto text-xl font-bold text-gray-800 lg:text-2xl"
+            >
               Восстановление пароля
             </h2>
             <p className="text-sm text-gray-800 lg:text-base">
               Укажите почту, на которую, регистрировали аккаунт, и мы отправим инструкцию по
               восстановлению пароля.
             </p>
-            <form className="flex flex-col">
+            <form aria-labelledby="reset-password" className="flex flex-col">
               <div className="flex flex-col gap-0.5 lg:gap-1">
                 <label className="text-xs text-gray-500" htmlFor="email">
                   Email
@@ -40,7 +43,7 @@ export default function LoginPage() {
             </button>
           </div>
           <div className="flex flex-col gap-1 lg:gap-2">
-            <p className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</p>
+            <span className="text-xs text-gray-500 lg:text-sm">Уже зарегистрированы?</span>
             <Link href="/login" className="text-sm font-bold text-blue-600 hover:underline">
               Войти в аккаунт
             </Link>

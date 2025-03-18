@@ -36,12 +36,15 @@ export const RestaurantCardPC: React.FC<Restaurant> = ({
       </div>
       <div className="flex w-full justify-between text-xs text-gray-600">
         <span className="flex items-center">
-          <DiscountIcon className="mr-1 h-4 w-4" />
+          <DiscountIcon aria-hidden="true" className="mr-1 h-4 w-4" />
           Средний чек:
         </span>
         <span>{price}</span>
       </div>
-      <button className="mt-4 w-full rounded-md bg-blue-500 py-2 text-base font-bold text-gray-100">
+      <button
+        type="button"
+        className="mt-4 w-full rounded-md bg-blue-500 py-2 text-base font-bold text-gray-100"
+      >
         Смотреть меню
       </button>
     </div>

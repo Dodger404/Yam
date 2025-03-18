@@ -31,11 +31,14 @@ export const RestaurantCard: React.FC<Restaurant> = ({
       <div className="mt-1 flex justify-between gap-4 text-xs text-gray-600">
         <span className="flex items-center">{time}</span>
         <span className="flex items-center">
-          <DiscountIcon className="mr-1 h-4 w-4" />
+          <DiscountIcon aria-hidden="true" className="mr-1 h-4 w-4" />
           {price}
         </span>
       </div>
-      <button className="mt-2 w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100">
+      <button
+        type="button"
+        className="mt-2 w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100"
+      >
         Смотреть меню
       </button>
     </div>
