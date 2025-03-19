@@ -1,8 +1,8 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
-import checkfile from '@/utils/checkFile';
+import checkfile from '@/utils/checkFile'
 
-import { ratingSchema } from './rating';
+import { ratingSchema } from './rating'
 
 export const restaurantInfoSchema = z.object({
   name: z.string().min(2).max(30),
@@ -15,6 +15,6 @@ export const restaurantInfoSchema = z.object({
   kitchenType: z.string(), // TODO: перевести в enum
   timeToDelivery: z.array(z.number()).length(2),
   averageСheck: z.array(z.number()).length(2),
-});
+})
 
-export type RestaurantInfo = z.infer<typeof restaurantInfoSchema>;
+export type RestaurantInfo = z.infer<typeof restaurantInfoSchema>

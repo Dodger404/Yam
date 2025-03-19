@@ -1,6 +1,6 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
-import checkfile from '@/utils/checkFile';
+import checkfile from '@/utils/checkFile'
 
 export const dishInfoSchema = z.object({
   name: z.string().min(2).max(30),
@@ -12,6 +12,6 @@ export const dishInfoSchema = z.object({
   price: z.number().positive({
     message: 'Цена не может быть ниже нуля',
   }),
-});
+})
 
-export type DishInfo = z.infer<typeof dishInfoSchema>;
+export type DishInfo = z.infer<typeof dishInfoSchema>

@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 export const userInfoSchema = z
   .object({
@@ -14,8 +14,8 @@ export const userInfoSchema = z
         code: z.ZodIssueCode.custom,
         message: 'Пароли должны совпадать',
         path: ['confirmPassword'],
-      });
+      })
     }
-  });
+  })
 
-export type UserInfo = z.infer<typeof userInfoSchema>;
+export type UserInfo = z.infer<typeof userInfoSchema>

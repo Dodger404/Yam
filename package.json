@@ -1,5 +1,5 @@
 {
-  "name": "my-next-app",
+  "name": "yammy",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,16 @@
     "prettier:fix": "prettier ./src -w",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -25,6 +34,7 @@
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.40.0",
+    "eslint": "^9.22.0",
     "eslint-plugin-prettier": "^5.2.3",
     "luxon": "^3.5.0",
     "next": "^15.2.1",
@@ -40,14 +50,14 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
-    "@rushstack/eslint-patch": "^1.11.0",
     "@types/better-sqlite3": "^7.6.12",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "drizzle-kit": "^0.30.5",
-    "eslint": "^9.22.0",
+    "drizzle-kit": "^0.19.1",
     "eslint-config-next": "15.1.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "postcss": "^8.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
