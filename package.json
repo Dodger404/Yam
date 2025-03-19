@@ -19,7 +19,7 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
       "eslint --fix",
       "prettier --write",
-      "git add"
+      "git commit"
     ],
     "*.js": "eslint --cache --fix"
   },
