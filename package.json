@@ -1,5 +1,5 @@
 {
-  "name": "my-next-app",
+  "name": "yammy",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,16 @@
     "prettier:fix": "prettier ./src -w",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": "eslint --cache --fix"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -54,17 +63,5 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   }
 }
