@@ -1,11 +1,11 @@
 export interface Restaurant {
-  name: string;
-  rating: number;
-  description: string;
-  kitchenType: string;
-  time: string;
-  price: string;
-  image: string;
+  name: string
+  rating: number
+  description: string
+  kitchenType: string
+  time: string
+  price: string
+  image: string
 }
 
 export const restaurants: Restaurant[] = [
@@ -81,4 +81,4 @@ export const restaurants: Restaurant[] = [
     price: '2 000–2 400 ₽',
     image: '/images/fishArtel.png',
   },
-];
+]
