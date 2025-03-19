@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function LoginPage() {
+export default function passwordRestore() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-[url('/images/bgImage.jpg')]">
       <div className='mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg'>
