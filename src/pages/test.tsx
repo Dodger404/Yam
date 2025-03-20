@@ -1,14 +1,6 @@
-import Image from 'next/image'
-import { CameraIcon } from '@heroicons/react/24/outline'
-
-import Header from '@/components/header'
-import HeaderMobile from '@/components/headerMobile'
-
 export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-gray-100 lg:bg-none">
-      <HeaderMobile />
-      <Header />
       <div className='flex flex-col items-center gap-7 p-5 lg:gap-4 lg:py-8'>
         <div className='hidden lg:flex lg:w-[36.25rem] lg:flex-col lg:items-start lg:gap-2'>
           <h2 className='text-3xl font-bold text-gray-800'>Настройка аккаунта</h2>
@@ -16,20 +8,11 @@ export default function ProfilePage() {
         <div className='w-full rounded-xl border border-gray-300 bg-white px-4 py-6 shadow-lg lg:max-w-[36.25rem] lg:px-6 lg:py-9'>
           <div className='flex flex-col gap-2'>
             <div className='relative h-[5.75rem] w-[5.75rem] self-center lg:self-start'>
-              <Image
-                src='/images/avatar.svg'
-                alt='Аватар пользователя'
-                width={92}
-                height={92}
-                className='rounded-full'
-              />
               <button
                 type='button'
                 aria-label='Изменить аватар профиля'
                 className='absolute bottom-0 right-[-1.25rem] flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 shadow-md hover:bg-blue-600 active:bg-blue-700'
-              >
-                <CameraIcon className='h-6 w-6 text-white' />
-              </button>
+              ></button>
             </div>
             <form className='flex w-full flex-col lg:gap-1'>
               <div className='md:grid md:grid-cols-2 md:gap-3'>
