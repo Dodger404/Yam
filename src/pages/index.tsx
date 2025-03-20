@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Filters from '@/components/filters'
+import { Filters } from '@/components/filters'
 import Header from '@/components/header'
 import HeaderMobile from '@/components/headerMobile'
 import { RestaurantList, RestaurantListPC } from '@/components/restaurantList'
@@ -18,20 +18,18 @@ export default function MainPage() {
       <HeaderMobile />
       <Header />
       <div className='mx-auto flex w-full max-w-screen-xl flex-col gap-7 px-5 py-5 lg:items-center lg:px-12 lg:py-8'>
-        <h1 className='font-roboto text-2xl font-bold text-gray-800 lg:text-center lg:text-3xl'>
-          Все рестораны
-        </h1>
+        <h1 className='font-roboto text-2xl font-bold text-gray-800 lg:text-3xl'>Все рестораны</h1>
         <div className='lg:hidden'>
           <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
         </div>
         <Filters />
         <RestaurantList />
         <RestaurantListPC />
-        <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block'>
+        <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block lg:pt-6'>
           Недавно заказывали
         </h2>
         <RestaurantListPC />
-        <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block'>
+        <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block lg:pt-6'>
           Избранные рестораны
         </h2>
         <RestaurantListPC />
