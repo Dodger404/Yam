@@ -18,7 +18,7 @@ const kitchenTypes = [
 const ratings = ['Все', '5 звёзд', '4 звезды', '3 звезды']
 const deliveryTimes = ['Все', 'До 30 минут', '30–40 минут', '40–50 минут']
 
-export default function Filters() {
+export function Filters() {
   const [selectedKitchenType, setSelectedKitchenType] = useState<string | null>(null)
   const [selectedRating, setSelectedRating] = useState<string | null>(null)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
@@ -94,6 +94,58 @@ export default function Filters() {
       <div className='lg:w-[200px]'>
         {renderListbox('Время доставки', deliveryTimes, selectedTime, setSelectedTime, 'time')}
       </div>
+    </div>
+  )
+}
+
+const menuCategories = ['Супы', 'Основные блюда', 'Десерты', 'Напитки']
+
+export function FiltersMenu() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  return (
+    <div className='relative lg:w-[200px] lg:self-start'>
+      <Listbox value={selectedCategory} onChange={setSelectedCategory}>
+        {({ open }) => (
+          <>
+            <Listbox.Button
+              className={cn(
+                'w-full cursor-pointer rounded-md border bg-white py-2 pl-3 pr-10 text-left text-sm',
+                open ? 'border-blue-500' : 'border-gray-300',
+              )}
+            >
+              {selectedCategory || 'Категория'}
+              {open ? (
+                <ChevronUpIcon
+                  aria-hidden='true'
+                  className='absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500'
+                />
+              ) : (
+                <ChevronDownIcon
+                  aria-hidden='true'
+                  className='absolute right-2 top-1/2 h-7 w-7 -translate-y-1/2 transform text-gray-500'
+                />
+              )}
+            </Listbox.Button>
+            <Listbox.Options className='absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white shadow-lg'>
+              {menuCategories.map(category => (
+                <Listbox.Option
+                  key={category}
+                  value={category}
+                  className={({ active }) =>
+                    cn(
+                      'cursor-pointer select-none py-2 pl-4 text-sm',
+                      active && 'bg-gray-100 text-blue-500',
+                    )
+                  }
+                >
+                  {category}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </>
+        )}
+      </Listbox>
     </div>
   )
 }
