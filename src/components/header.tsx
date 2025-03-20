@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Basket } from '@/components/icons/basket'
 import { Car } from '@/components/icons/car'
@@ -7,6 +9,9 @@ import { LogoPC } from '@/components/icons/logoPC'
 import { Storage } from '@/components/icons/storage'
 
 export default function Header() {
+  const router = useRouter()
+  const isProfileActive = router.pathname === '/profile'
+
   return (
     <header className='hidden lg:flex lg:w-full lg:items-center lg:justify-between lg:border-b lg:border-gray-300 lg:bg-white lg:px-6 lg:py-4'>
       <LogoPC aria-hidden='true' />
@@ -52,7 +57,14 @@ export default function Header() {
           Корзина
         </a>
       </nav>
-      <div className='ml-6 flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-transparent transition-all hover:border-blue-600 active:border-2 active:border-blue-700'>
+      <Link
+        href='/profile'
+        className={`ml-6 flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border ${
+          isProfileActive
+            ? 'border-2 border-blue-700'
+            : 'hover:border-blue-600 active:border-2 active:border-blue-700'
+        }`}
+      >
         <Image
           src='/images/avatar.svg'
           alt='Аватар пользователя'
@@ -60,7 +72,7 @@ export default function Header() {
           height={40}
           className='rounded-full'
         />
-      </div>
+      </Link>
     </header>
   )
 }

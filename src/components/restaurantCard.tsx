@@ -37,7 +37,7 @@ export const RestaurantCard: React.FC<Restaurant> = ({
       </div>
       <button
         type='button'
-        className='mt-2 w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100'
+        className='mt-2 w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100 hover:bg-blue-600 active:bg-blue-700'
       >
         Смотреть меню
       </button>

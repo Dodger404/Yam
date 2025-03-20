@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-[url('/images/bgImage.jpg')]">
-      <div className='mt-[-10%] flex w-full max-w-[380px] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg'>
+      <div className='mt-8 flex w-full max-w-[23.75rem] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg'>
         <div className='flex flex-col gap-9 px-5 py-6 lg:px-6 lg:py-10'>
           <div className='flex flex-col gap-6'>
             <h2 id='login' className='font-roboto text-xl font-bold text-gray-800 lg:text-2xl'>

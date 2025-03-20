@@ -21,7 +21,9 @@ export default function MainPage() {
         <h1 className='font-roboto text-2xl font-bold text-gray-800 lg:text-center lg:text-3xl'>
           Все рестораны
         </h1>
-        <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
+        <div className='lg:hidden'>
+          <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
+        </div>
         <Filters />
         <RestaurantList />
         <RestaurantListPC />
