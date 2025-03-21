@@ -2,8 +2,8 @@ import React from 'react'
 import { ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 
 import { FiltersMenu } from '@/components/filters'
-import Header from '@/components/header'
-import HeaderMobile from '@/components/headerMobile'
+import Header from '@/components/headers/header'
+import HeaderMobile from '@/components/headers/headerMobile'
 import { MenuList } from '@/components/menuList'
 
 export default function MenuPage() {
