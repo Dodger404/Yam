@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { CameraIcon } from '@heroicons/react/24/outline'
 
-import Header from '@/components/header'
-import HeaderMobile from '@/components/headerMobile'
+import Header from '@/components/headers/header'
+import HeaderMobile from '@/components/headers/headerMobile'
 
 export default function ProfilePage() {
   return (

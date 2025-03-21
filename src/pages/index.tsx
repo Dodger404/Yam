@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import { Filters } from '@/components/filters'
-import Header from '@/components/header'
-import HeaderMobile from '@/components/headerMobile'
+import Header from '@/components/headers/header'
+import HeaderMobile from '@/components/headers/headerMobile'
 import { RestaurantList, RestaurantListPC } from '@/components/restaurantList'
 import Tabs from '@/components/tabs'
 
