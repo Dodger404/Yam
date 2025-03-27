@@ -4,7 +4,7 @@ import { ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 import { FiltersMenu } from '@/components/filters'
 import Header from '@/components/headers/header'
 import HeaderMobile from '@/components/headers/headerMobile'
-import { MenuList } from '@/components/menuList'
+import { MenuList } from '@/components/lists/menuList'
 
 export default function MenuPage() {
   return (
