@@ -5,10 +5,12 @@ import { v4 as uuid } from 'uuid'
 export const orderItems = pgTable('order_items', {
   id: serial('id').primaryKey(),
   orderId: uuid('order_id').notNull(),
-  dishId: uuid('dish_id').notNull().references(() => dishes.id),
+  dishId: uuid('dish_id')
+    .notNull()
+    .references(() => dishes.id),
   count: integer('count').notNull(),
-  priceAtOrder: integer('price_at_order').notNull(), 
-});
+  priceAtOrder: integer('price_at_order').notNull(),
+})
 
 // Схема для статусов заказа
 export const orderStatusEnum = pgEnum('order_status', [
@@ -16,8 +18,8 @@ export const orderStatusEnum = pgEnum('order_status', [
   'cooking',
   'delivering',
   'delivered',
-  'canceled'
-]);
+  'canceled',
+])
 
 // Схема для заказов
 export const orders = pgTable('orders', {
@@ -29,23 +31,26 @@ export const orders = pgTable('orders', {
   address: text('address').notNull(),
   courierInfo: jsonb('courier_info').notNull(),
   paymentInfo: jsonb('payment_info').notNull(),
-});
+})
 
 // Схема для оценки заказа
 export const orderRatings = pgTable('order_ratings', {
   id: serial('id').primaryKey(),
-  orderId: uuid('order_id').notNull().unique().references(() => orders.id),
+  orderId: uuid('order_id')
+    .notNull()
+    .unique()
+    .references(() => orders.id),
   restaurantRating: integer('restaurant_rating').notNull(), // 0-5
   deliveryRating: integer('delivery_rating').notNull(), // 0-5
   feedback: text('feedback'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
-});
+})
 
 // Определение отношений между таблицами
 export const ordersRelations = relations(orders, ({ many, one }) => ({
   items: many(orderItems),
   rating: one(orderRatings),
-}));
+}))
 
 export const orderItemsRelations = relations(orderItems, ({ one }) => ({
   order: one(orders, {
@@ -56,4 +61,4 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
     fields: [orderItems.dishId],
     references: [dishes.id],
   }),
-}));
+}))
