@@ -1,5 +1,5 @@
 import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import { v4 as uuid,pgEnum } from 'uuid'
+import { pgEnum, v4 as uuid } from 'uuid'
 
 export const kitchenTypeEnum = pgEnum('kitchen_type', [
   'ITALIAN',
@@ -8,8 +8,8 @@ export const kitchenTypeEnum = pgEnum('kitchen_type', [
   'AMERICAN',
   'MEXICAN',
   'CHINESE',
-  'GEORGIAN'
-]);
+  'GEORGIAN',
+])
 
 export const restaurants = pgTable('restaurants', {
   id: serial('id').primaryKey(),
@@ -20,5 +20,4 @@ export const restaurants = pgTable('restaurants', {
   kitchenType: kitchenTypeEnum('kitchen_type').notNull(),
   timeToDelivery: jsonb('time_to_delivery').notNull(),
   averageСheck: jsonb('average_check').notNull(),
-});
-
+})
