@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Filters } from '@/components/filters'
 import Header from '@/components/headers/header'
 import HeaderMobile from '@/components/headers/headerMobile'
-import { RestaurantList, RestaurantListPC } from '@/components/restaurantList'
+import { RestaurantList, RestaurantListPC } from '@/components/lists/restaurantList'
 import Tabs from '@/components/tabs'
 
 export default function MainPage() {
