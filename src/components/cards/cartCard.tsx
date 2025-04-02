@@ -13,7 +13,7 @@ export const CartCard: React.FC<Menu> = ({ name, price, description, image }) =>
         alt={name}
         className='col-start-1 row-span-2 row-start-1 h-20 w-20 rounded-md object-cover lg:row-span-3'
       />
-      <h3 className='col-start-2 row-start-1 ml-3 self-center text-xs text-gray-800 lg:col-start-2 lg:row-start-1 lg:text-base lg:font-bold'>
+      <h3 className='col-start-2 row-start-1 ml-3 self-center truncate text-xs text-gray-800 lg:col-start-2 lg:row-start-1 lg:text-base lg:font-bold'>
         {name}
       </h3>
       <button
@@ -26,7 +26,7 @@ export const CartCard: React.FC<Menu> = ({ name, price, description, image }) =>
       <p className='col-span-2 col-start-2 row-start-2 ml-3 line-clamp-3 text-left text-xs text-gray-600 lg:col-span-1 lg:col-start-2 lg:row-start-2 lg:mx-3 lg:line-clamp-2 lg:text-sm'>
         {description}
       </p>
-      <span className='font-roboto lg:font-Roboto col-start-1 row-start-3 self-end overflow-hidden text-ellipsis whitespace-nowrap text-xl font-bold text-green-500 lg:col-start-2 lg:row-start-3 lg:ml-3 lg:self-auto lg:text-2xl'>
+      <span className='font-roboto lg:font-Roboto col-start-1 row-start-3 self-end truncate text-xl font-bold text-green-500 lg:col-start-2 lg:row-start-3 lg:ml-3 lg:self-auto lg:text-2xl'>
         {price}
       </span>
       <div className='col-span-3 col-start-2 row-start-3 mt-auto flex w-full items-center gap-1 lg:col-span-1 lg:col-start-3 lg:row-span-2 lg:row-start-2 lg:self-center'>

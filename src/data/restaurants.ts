@@ -12,7 +12,7 @@ export const restaurants: Restaurant[] = [
   {
     name: 'Трапеза Ярополка',
     rating: 5,
-    description: 'Традиционная кухня, славянские блюда',
+    description: 'Традиционная кухня',
     kitchenType: 'славянская',
     time: '30–40 минут',
     price: '1 500–2 000 ₽',
@@ -22,7 +22,7 @@ export const restaurants: Restaurant[] = [
     name: 'Мёд и перец',
     rating: 4,
     description: 'Современные блюда с акцентом на местные продукты',
-    kitchenType: 'европейская',
+    kitchenType: 'микс кулинарных традиций',
     time: '40–50 минут',
     price: '2 000–2 500 ₽',
     image: '/images/honey.jpg',

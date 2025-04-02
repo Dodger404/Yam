@@ -10,11 +10,11 @@ export const MenuCard: React.FC<Menu> = ({ name, price, description, image }) =>
   return (
     <div className='flex h-full flex-col gap-2 rounded-md bg-white px-4 pb-3 pt-2 shadow-md lg:px-4 lg:pb-4 lg:pt-3'>
       <img src={image} alt={name} className='h-32 w-full rounded-xl object-cover' />
-      <div className='flex items-center justify-between gap-1'>
-        <span className='font-roboto flex items-center text-xl font-bold text-green-500 lg:hidden'>
+      <div className='flex items-center gap-1'>
+        <span className='font-roboto flex items-center truncate text-xl font-bold text-green-500 lg:hidden'>
           {price}
         </span>
-        <h3 className='text-xs text-gray-800 lg:text-sm'>{name}</h3>
+        <h3 className='truncate text-left text-xs text-gray-800 lg:text-sm'>{name}</h3>
       </div>
       <p className='line-clamp-3 flex-1 text-left text-xs text-gray-600'>{description}</p>
       <span className='font-roboto hidden text-xl font-bold text-green-500 lg:block'>{price}</span>
