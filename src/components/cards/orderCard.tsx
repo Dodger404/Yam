@@ -17,7 +17,6 @@ export const OrderCard = () => {
         </span>
         <button
           type='button'
-          aria-label='Добавить'
           className='col-span-3 col-start-1 row-start-3 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-bold text-gray-800 hover:border-gray-600 active:border-gray-800'
         >
           Подробнее
