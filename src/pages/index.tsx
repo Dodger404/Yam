@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Filters } from '@/components/filters'
 import Header from '@/components/headers/header'
 import HeaderMobile from '@/components/headers/headerMobile'
-import { RestaurantList, RestaurantListPC } from '@/components/lists/restaurantList'
+import { RestaurantList } from '@/components/lists/restaurantList'
 import Tabs from '@/components/tabs'
 
 export default function MainPage() {
@@ -24,15 +24,14 @@ export default function MainPage() {
         </div>
         <Filters />
         <RestaurantList />
-        <RestaurantListPC />
         <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block lg:pt-6'>
           Недавно заказывали
         </h2>
-        <RestaurantListPC />
+        <RestaurantList />
         <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block lg:pt-6'>
           Избранные рестораны
         </h2>
-        <RestaurantListPC />
+        <RestaurantList />
       </div>
     </div>
   )
