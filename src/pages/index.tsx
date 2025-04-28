@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { Filters } from '@/components/filters'
-import Header from '@/components/headers/header'
-import HeaderMobile from '@/components/headers/headerMobile'
 import { RestaurantList } from '@/components/lists/restaurantList'
-import Tabs from '@/components/tabs'
+import { Filters } from '@/components/ui/filters'
+import Header from '@/components/ui/headers/header'
+import HeaderMobile from '@/components/ui/headers/headerMobile'
+import Tabs from '@/components/ui/tabs'
 
 export default function MainPage() {
   const [activeTab, setActiveTab] = useState('all')

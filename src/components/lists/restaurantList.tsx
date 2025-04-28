@@ -1,4 +1,4 @@
-import { RestaurantCard } from '@/components/cards/restaurantCard'
+import { RestaurantCard } from '@/components/ui/cards/restaurantCard'
 import { restaurants } from '@/data/restaurants'
 
 export const RestaurantList = () => {

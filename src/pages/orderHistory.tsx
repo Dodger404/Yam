@@ -1,9 +1,9 @@
 import React from 'react'
 import { ArrowLongLeftIcon } from '@heroicons/react/24/solid'
 
-import { OrderCard } from '@/components/cards/orderCard'
-import Header from '@/components/headers/header'
-import HeaderMobile from '@/components/headers/headerMobile'
+import { OrderCard } from '@/components/ui/cards/orderCard'
+import Header from '@/components/ui/headers/header'
+import HeaderMobile from '@/components/ui/headers/headerMobile'
 
 export default function OrderHistoryPage() {
   return (

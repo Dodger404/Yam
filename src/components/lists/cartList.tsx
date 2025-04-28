@@ -1,4 +1,4 @@
-import { CartCard } from '@/components/cards/cartCard'
+import { CartCard } from '@/components/ui/cards/cartCard'
 import { menu } from '@/data/menu'
 
 export const CartList = () => {
