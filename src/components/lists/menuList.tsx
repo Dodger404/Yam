@@ -1,4 +1,4 @@
-import { MenuCard } from '@/components/cards/menuCard'
+import { MenuCard } from '@/components/ui/cards/menuCard'
 import { menu } from '@/data/menu'
 
 export const MenuList = () => {

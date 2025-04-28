@@ -1,6 +1,8 @@
-import Link from 'next/link'
+import PasswordRestoreForm from '@/components/passwordRestorePage/passwordRestoreForm'
+import PasswordRestoreLinks from '@/components/passwordRestorePage/passwordRestoreLinks'
+import PrimaryButton from '@/components/ui/buttons/primaryButton'
 
-export default function passwordRestore() {
+export default function PasswordRestorePage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[url('/images/bgImageM.jpg')] bg-cover bg-fixed bg-center lg:bg-[url('/images/bgImage.jpg')]">
       <div className='mt-5 flex w-full max-w-[23.75rem] flex-col lg:mt-0 lg:rounded-xl lg:border lg:border-gray-300 lg:bg-white lg:shadow-lg'>
@@ -13,41 +15,13 @@ export default function passwordRestore() {
               Восстановление пароля
             </h2>
             <p className='text-sm text-gray-800 lg:text-base'>
-              Укажите почту, на которую, регистрировали аккаунт, и мы отправим инструкцию по
+              Укажите почту, на которую регистрировали аккаунт, и мы отправим инструкцию по
               восстановлению пароля.
             </p>
-            <form aria-labelledby='reset-password' className='flex flex-col'>
-              <div className='flex flex-col gap-0.5 lg:gap-1'>
-                <label className='text-xs text-gray-500' htmlFor='email'>
-                  Email
-                </label>
-                <input
-                  type='email'
-                  id='email'
-                  placeholder='ivanov@yandex.ru'
-                  minLength={5}
-                  maxLength={100}
-                  required
-                  autoComplete='username'
-                  pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-                  data-error-message='Введите корректный email (например, ivanov@yandex.ru)'
-                  className='w-full rounded border border-gray-300 px-2 py-1.5 text-gray-800 placeholder:text-sm placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:outline-none lg:placeholder:text-base'
-                />
-              </div>
-            </form>
+            <PasswordRestoreForm />
           </div>
-          <button
-            type='submit'
-            className='rounded-lg bg-blue-500 py-2 text-base font-bold text-gray-100 hover:bg-blue-600 hover:text-gray-100 active:bg-blue-700 active:text-white'
-          >
-            Восстановить
-          </button>
-          <div className='flex flex-col gap-1 lg:gap-2'>
-            <span className='text-xs text-gray-500 lg:text-sm'>Уже зарегистрированы?</span>
-            <Link href='/login' className='text-sm font-bold text-blue-600 hover:underline'>
-              Войти в аккаунт
-            </Link>
-          </div>
+          <PrimaryButton type='submit'>Восстановить</PrimaryButton>
+          <PasswordRestoreLinks />
         </div>
       </div>
     </div>
