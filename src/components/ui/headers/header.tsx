@@ -14,7 +14,9 @@ export default function Header() {
 
   return (
     <header className='hidden lg:flex lg:w-full lg:items-center lg:justify-between lg:border-b lg:border-gray-300 lg:bg-white lg:px-6 lg:py-4'>
-      <LogoPC aria-hidden='true' />
+      <Link href='/'>
+        <LogoPC aria-hidden='true' />
+      </Link>
       <nav role='navigation' aria-label='Навигация' className='ml-auto flex items-center gap-6'>
         <a
           href='#'
@@ -26,8 +28,8 @@ export default function Header() {
           </div>
           Чат поддержки
         </a>
-        <a
-          href='#'
+        <Link
+          href='/order-info'
           className='group flex items-center gap-2 text-gray-800 hover:text-blue-600 active:text-blue-700'
         >
           <div className='relative'>
@@ -35,9 +37,9 @@ export default function Header() {
             <span className='absolute -right-0.5 top-0.5 h-2 w-2 rounded-full bg-red-500 opacity-0 transition-opacity group-hover:opacity-100 group-active:opacity-100'></span>
           </div>
           Отслеживание заказа
-        </a>
-        <a
-          href='#'
+        </Link>
+        <Link
+          href='/order-history'
           className='group flex items-center gap-2 text-gray-800 hover:text-blue-600 active:text-blue-700'
         >
           <div className='relative'>
@@ -45,9 +47,9 @@ export default function Header() {
             <span className='absolute -right-0.5 top-0.5 h-2 w-2 rounded-full bg-red-500 opacity-0 transition-opacity group-hover:opacity-100 group-active:opacity-100'></span>
           </div>
           Ваши заказы
-        </a>
-        <a
-          href='#'
+        </Link>
+        <Link
+          href='/cart'
           className='group flex items-center gap-2 text-gray-800 hover:text-blue-600 active:text-blue-700'
         >
           <div className='relative'>
@@ -55,7 +57,7 @@ export default function Header() {
             <span className='absolute -right-0.5 top-0.5 h-2 w-2 rounded-full bg-red-500 opacity-0 transition-opacity group-hover:opacity-100 group-active:opacity-100'></span>
           </div>
           Корзина
-        </a>
+        </Link>
       </nav>
       <Link
         href='/profile'

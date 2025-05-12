@@ -1,8 +1,23 @@
+'use client'
+
+import { JSX } from 'react'
+import { useRouter } from 'next/router'
+
 import { DiscountIcon } from '@/components/icons/discountIcon'
 import { Star } from '@/components/icons/star'
 import { Restaurant } from '@/data/restaurants'
 
-export const RestaurantCard: React.FC<Restaurant> = ({
+export const RestaurantCard: ({
+  id,
+  name,
+  rating,
+  description,
+  kitchenType,
+  time,
+  price,
+  image,
+}: Restaurant) => JSX.Element = ({
+  id,
   name,
   rating,
   description,
@@ -11,6 +26,12 @@ export const RestaurantCard: React.FC<Restaurant> = ({
   price,
   image,
 }) => {
+  const router = useRouter()
+
+  const goToMenu = (currentId: string) => {
+    router.push(`/menu/${currentId}`)
+  }
+
   return (
     <>
       <div className='flex flex-col gap-1 rounded-md bg-white px-4 pb-4 pt-2 shadow-md lg:hidden'>
@@ -42,6 +63,7 @@ export const RestaurantCard: React.FC<Restaurant> = ({
           </span>
         </div>
         <button
+          onClick={() => goToMenu(id)}
           type='button'
           className='mt-2 w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100 hover:bg-blue-600 active:bg-blue-700'
         >
@@ -81,6 +103,7 @@ export const RestaurantCard: React.FC<Restaurant> = ({
           <span>{price}</span>
         </div>
         <button
+          onClick={() => goToMenu(id)}
           type='button'
           className='mt-4 w-full rounded-md bg-blue-500 py-2 text-base font-bold text-gray-100 hover:bg-blue-600 active:bg-blue-700'
         >
