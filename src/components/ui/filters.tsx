@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Listbox } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 
@@ -100,8 +100,17 @@ export function Filters() {
 
 const menuCategories = ['Супы', 'Основные блюда', 'Десерты', 'Напитки']
 
-export function FiltersMenu() {
+export function FiltersMenu({ menu, setFilterGroup }) {
+  const [menuCategories, setMenuCategories] = useState<string[] | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  useEffect(() => {
+    setMenuCategories(Object.keys(menu).map(groupName => groupName))
+  }, [])
+
+  useEffect(() => {
+    setFilterGroup(selectedCategory)
+  }, [selectedCategory])
 
   return (
     <div className='relative lg:w-[200px] lg:self-start'>
@@ -128,20 +137,24 @@ export function FiltersMenu() {
               )}
             </Listbox.Button>
             <Listbox.Options className='absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white shadow-lg'>
-              {menuCategories.map(category => (
-                <Listbox.Option
-                  key={category}
-                  value={category}
-                  className={({ active }) =>
-                    cn(
-                      'cursor-pointer select-none py-2 pl-4 text-sm',
-                      active && 'bg-gray-100 text-blue-500',
-                    )
-                  }
-                >
-                  {category}
-                </Listbox.Option>
-              ))}
+              {menuCategories && (
+                <Fragment>
+                  {menuCategories.map(category => (
+                    <Listbox.Option
+                      key={category}
+                      value={category}
+                      className={({ active }) =>
+                        cn(
+                          'cursor-pointer select-none py-2 pl-4 text-sm',
+                          active && 'bg-gray-100 text-blue-500',
+                        )
+                      }
+                    >
+                      {category}
+                    </Listbox.Option>
+                  ))}
+                </Fragment>
+              )}
             </Listbox.Options>
           </>
         )}

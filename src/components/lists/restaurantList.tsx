@@ -1,5 +1,5 @@
 import { RestaurantCard } from '@/components/ui/cards/restaurantCard'
-import { restaurants } from '@/data/restaurants'
+import { restaurants } from '@/types/restaurants'
 
 export const RestaurantList = ({ list }) => {
   return (

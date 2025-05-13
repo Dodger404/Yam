@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { DiscountIcon } from '@/components/icons/discountIcon'
 import { Star } from '@/components/icons/star'
-import { Restaurant } from '@/data/restaurants'
+import { Restaurant } from '@/types/restaurants'
 
 export const RestaurantCard: ({
   id,
@@ -29,7 +29,10 @@ export const RestaurantCard: ({
   const router = useRouter()
 
   const goToMenu = (currentId: string) => {
-    router.push(`/menu/${currentId}`)
+    router.push({
+      pathname: `/menu/${id}`,
+      query: { name: encodeURIComponent(name) },
+    })
   }
 
   return (

@@ -1,5 +1,5 @@
 import { CartCard } from '@/components/ui/cards/cartCard'
-import { menu } from '@/data/menu'
+import { menu } from '@/types/menu'
 
 export const CartList = () => {
   return (
