@@ -1,10 +1,10 @@
 import { CartCard } from '@/components/ui/cards/cartCard'
-import { menu } from '@/types/menu'
+import { Menu } from '@/types/menu'
 
-export const CartList = () => {
+export const CartList = ({ items }: { items: Menu[] }) => {
   return (
     <div className='grid grid-cols-1 gap-3'>
-      {menu.map(menu => (
+      {items.map(menu => (
         <CartCard key={menu.name} {...menu} />
       ))}
     </div>

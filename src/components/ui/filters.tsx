@@ -1,28 +1,54 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { Listbox } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 
 import { cn } from '@/utils/cn'
 
-const kitchenTypes = [
-  'Все',
-  'Славянская',
-  'Европейская',
-  'Русская',
-  'Традиционная русская',
-  'Барбекю',
-  'Азиатская',
-  'Кондитерская',
-  'Рыбная',
-]
-const ratings = ['Все', '5 звёзд', '4 звезды', '3 звезды']
-const deliveryTimes = ['Все', 'До 30 минут', '30–40 минут', '40–50 минут']
-
-export function Filters() {
+export function Filters({ restaurantList, setRestaurantList }) {
   const [selectedKitchenType, setSelectedKitchenType] = useState<string | null>(null)
   const [selectedRating, setSelectedRating] = useState<string | null>(null)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [openList, setOpenList] = useState<string | null>(null)
+
+  const [kitchenTypes, setKitchenTypes] = useState([])
+  const [ratings, setRatings] = useState([])
+  const [deliveryTimes, setDeliveryTimes] = useState([])
+
+  const closeFilters = () => {
+    setSelectedKitchenType(null)
+    setSelectedRating(null)
+    setSelectedTime(null)
+    setRestaurantList(null)
+  }
+
+  useEffect(() => {
+    if (restaurantList && restaurantList.length > 0) {
+      const newKitchenTypes = [...new Set(restaurantList.map(rest => rest.kitchenType))]
+      const newRatings = [...new Set(restaurantList.map(rest => rest.rating))]
+      const newDeliveryTimes = [...new Set(restaurantList.map(rest => rest.time))]
+
+      setKitchenTypes(newKitchenTypes)
+      setRatings(newRatings)
+      setDeliveryTimes(newDeliveryTimes)
+    }
+  }, [restaurantList])
+
+  const filteredRestaurants = useMemo(() => {
+    if (!restaurantList?.length) return []
+    return restaurantList.filter(rest => {
+      const matchKitchen = !selectedKitchenType || rest.kitchenType === selectedKitchenType
+      const matchRating = !selectedRating || rest.rating === +selectedRating
+      const matchTime = !selectedTime || rest.time === selectedTime
+
+      return matchKitchen && matchRating && matchTime
+    })
+  }, [restaurantList, selectedKitchenType, selectedRating, selectedTime])
+
+  useEffect(() => {
+    if (filteredRestaurants) {
+      setRestaurantList(filteredRestaurants)
+    }
+  }, [filteredRestaurants])
 
   const renderListbox = (
     placeholder: string,
@@ -94,6 +120,19 @@ export function Filters() {
       <div className='lg:w-[200px]'>
         {renderListbox('Время доставки', deliveryTimes, selectedTime, setSelectedTime, 'time')}
       </div>
+      {selectedKitchenType || selectedRating || selectedTime ? (
+        <div className='lg:w-[200px]'>
+          <button
+            onClick={() => closeFilters()}
+            type='button'
+            className='w-full rounded-md bg-blue-500 py-2 text-sm font-bold text-gray-100 hover:bg-blue-600 active:bg-blue-700'
+          >
+            Сброс
+          </button>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

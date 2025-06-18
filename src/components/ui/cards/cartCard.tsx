@@ -27,7 +27,7 @@ export const CartCard: React.FC<Menu> = ({ name, price, description, image }) =>
         {description}
       </p>
       <span className='font-roboto lg:font-Roboto col-start-1 row-start-3 self-end truncate text-xl font-bold text-green-500 lg:col-start-2 lg:row-start-3 lg:ml-3 lg:self-auto lg:text-2xl'>
-        {price}
+        {price} ₽
       </span>
       <div className='col-span-3 col-start-2 row-start-3 mt-auto flex w-full items-center gap-1 lg:col-span-1 lg:col-start-3 lg:row-span-2 lg:row-start-2 lg:self-center'>
         <button

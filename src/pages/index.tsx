@@ -14,6 +14,7 @@ import { Restaurant } from '@/types/restaurants'
 export default function MainPage() {
   const [activeTab, setActiveTab] = useState('all')
   const [restaurantList, setRestaurantList] = useState<Restaurant | null>(null)
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState<Restaurant | null>(null)
   const [recent, setRecent] = useState<Restaurant | null>(null)
   const [favorite, setFavorite] = useState<Restaurant | null>(null)
 
@@ -25,6 +26,10 @@ export default function MainPage() {
   const handleChangeTab = (tab: string) => {
     setActiveTab(tab)
   }
+
+  useEffect(() => {
+    console.log('filteredRestaurantList ', filteredRestaurantList)
+  }, [filteredRestaurantList])
 
   useEffect(() => {
     if (!isLoading && !isError && data) {
@@ -53,10 +58,16 @@ export default function MainPage() {
         <div className='lg:hidden'>
           <Tabs activeTab={activeTab} onChangeTab={handleChangeTab} />
         </div>
-        <Filters />
+        <Filters restaurantList={restaurantList} setRestaurantList={setFilteredRestaurantList} />
         {!isLoading && !isError && restaurantList ? (
           <Fragment>
-            <RestaurantList list={restaurantList} />
+            {filteredRestaurantList?.length === 0 ? (
+              <p className='text-lg text-gray-600'>
+                Нет ресторанов, соответствующих выбранным фильтрам.
+              </p>
+            ) : (
+              <RestaurantList list={filteredRestaurantList || restaurantList} />
+            )}
             {recent && (
               <Fragment>
                 <h2 className='font-roboto hidden self-start text-left text-2xl font-bold text-gray-800 lg:block lg:pt-6'>

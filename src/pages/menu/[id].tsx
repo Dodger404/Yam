@@ -17,10 +17,12 @@ export default function MenuPage() {
 
   const router = useRouter()
   const { id } = router.query
-  const decodedName = decodeURIComponent(router.query.name as string)
+  const decodedName = router.query.name
+    ? decodeURIComponent(router.query.name as string)
+    : 'Мёд и перец'
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['key'],
+    queryKey: ['getMenu'],
     queryFn: () => getMenu(id as string),
   })
 
