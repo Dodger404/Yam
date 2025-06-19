@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { Basket } from '@/components/icons/basket'
-import { BMenu } from '@/components/icons/bMenu'
-import { Logo } from '@/components/icons/logo'
-import BurgerMenu from '@/components/ui/burgerMenu'
+import { Basket } from '../../icons/basket'
+import { BMenu } from '../../icons/bMenu'
+import { Logo } from '../../icons/logo'
+import BurgerMenu from '../burgerMenu'
 
 export default function HeaderMobile() {
   const [menuOpen, setMenuOpen] = useState(false)

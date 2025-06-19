@@ -1,5 +1,5 @@
-import { RestaurantCard } from '@/components/ui/cards/restaurantCard'
-import { Restaurant } from '@/types/restaurants'
+import { Restaurant } from '../../types/restaurants'
+import { RestaurantCard } from '../ui/cards/restaurantCard'
 
 export const RestaurantList = ({ list }: { list: Restaurant[] }) => {
   return (

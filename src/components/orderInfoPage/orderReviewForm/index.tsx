@@ -1,5 +1,5 @@
-import PrimaryButton from '@/components/ui/buttons/primaryButton'
-import StarRating from '@/components/ui/rating/starRating'
+import PrimaryButton from '../../ui/buttons/primaryButton'
+import StarRating from '../../ui/rating/starRating'
 
 export default function OrderReviewForm() {
   return (

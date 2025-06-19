@@ -1,6 +1,6 @@
-import PasswordRestoreForm from '@/components/passwordRestorePage/passwordRestoreForm'
-import PasswordRestoreLinks from '@/components/passwordRestorePage/passwordRestoreLinks'
-import PrimaryButton from '@/components/ui/buttons/primaryButton'
+import PasswordRestoreForm from '../components/passwordRestorePage/passwordRestoreForm'
+import PasswordRestoreLinks from '../components/passwordRestorePage/passwordRestoreLinks'
+import PrimaryButton from '../components/ui/buttons/primaryButton'
 
 export default function PasswordRestorePage() {
   return (

@@ -1,4 +1,4 @@
-import { DishCard } from '@/components/ui/cards/dish'
+import { DishCard } from '../../ui/cards/dish'
 
 export default function OrderDetailsCard() {
   return (

@@ -1,4 +1,4 @@
-import PrimaryButton from '@/components/ui/buttons/primaryButton'
+import PrimaryButton from '../../ui/buttons/primaryButton'
 
 interface OrderSummaryProps {
   totalPrice: string

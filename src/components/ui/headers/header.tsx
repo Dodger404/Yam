@@ -2,11 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Basket } from '@/components/icons/basket'
-import { Car } from '@/components/icons/car'
-import { Chat } from '@/components/icons/chat'
-import { LogoPC } from '@/components/icons/logoPC'
-import { Storage } from '@/components/icons/storage'
+import { Basket } from '../../icons/basket'
+import { Car } from '../../icons/car'
+import { Chat } from '../../icons/chat'
+import { LogoPC } from '../../icons/logoPC'
 
 export default function Header() {
   const router = useRouter()

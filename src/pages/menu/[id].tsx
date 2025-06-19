@@ -4,12 +4,12 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
 
-import { getMenu } from '@/api/get-menu'
-import { MenuList } from '@/components/lists/menuList'
-import { FiltersMenu } from '@/components/ui/filters'
-import Header from '@/components/ui/headers/header'
-import HeaderMobile from '@/components/ui/headers/headerMobile'
-import PageTitleWithBack from '@/components/ui/pageTitleWithBack'
+import { getMenu } from '../../api/get-menu'
+import { MenuList } from '../../components/lists/menuList'
+import { FiltersMenu } from '../../components/ui/filters'
+import Header from '../../components/ui/headers/header'
+import HeaderMobile from '../../components/ui/headers/headerMobile'
+import PageTitleWithBack from '../../components/ui/pageTitleWithBack'
 
 export default function MenuPage() {
   const [menu, setMenu] = useState(null)

@@ -2,8 +2,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 import { Listbox } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 
-import { Restaurant } from '@/types/restaurants'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 export function Filters({ restaurantList, setRestaurantList }) {
   const [selectedKitchenType, setSelectedKitchenType] = useState<string | null>(null)

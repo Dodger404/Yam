@@ -1,7 +1,6 @@
 import { z } from 'zod'
 
-import checkfile from '@/utils/checkFile'
-
+import checkfile from '../utils/checkFile'
 import { ratingSchema } from './rating'
 
 export const restaurantInfoSchema = z.object({

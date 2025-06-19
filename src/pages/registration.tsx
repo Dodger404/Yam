@@ -1,6 +1,6 @@
-import RegistrationForm from '@/components/registrationPage/registrationForm'
-import RegistrationLinks from '@/components/registrationPage/registrationLinks'
-import PrimaryButton from '@/components/ui/buttons/primaryButton'
+import RegistrationForm from '../components/registrationPage/registrationForm'
+import RegistrationLinks from '../components/registrationPage/registrationLinks'
+import PrimaryButton from '../components/ui/buttons/primaryButton'
 
 export default function RegistrationPage() {
   return (

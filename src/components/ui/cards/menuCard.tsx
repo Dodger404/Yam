@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
 
-import { Basket } from '@/components/icons/basket'
-import { Menu } from '@/types/menu'
+import { Menu } from '../../../types/menu'
+import { Basket } from '../../icons/basket'
 
 export const MenuCard: React.FC<Menu> = ({ name, price, description, image }) => {
   const [count, setCount] = useState(0)

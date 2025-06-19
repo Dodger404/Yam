@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import FormInput from '@/components/ui/formInput'
+import FormInput from '../../ui/formInput'
 
 export default function LoginForm() {
   return (

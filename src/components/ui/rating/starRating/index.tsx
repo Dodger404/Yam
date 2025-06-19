@@ -1,4 +1,4 @@
-import { Star } from '@/components/icons/star'
+import { Star } from '../../../icons/star'
 
 export default function StarRating({ label }: { label: string }) {
   return (

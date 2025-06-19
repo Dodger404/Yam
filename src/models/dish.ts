@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import checkfile from '@/utils/checkFile'
+import checkfile from '../utils/checkFile'
 
 export const dishInfoSchema = z.object({
   name: z.string().min(2).max(30),

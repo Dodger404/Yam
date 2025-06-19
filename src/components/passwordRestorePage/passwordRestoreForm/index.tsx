@@ -1,4 +1,4 @@
-import FormInput from '@/components/ui/formInput'
+import FormInput from '../../ui/formInput'
 
 export default function PasswordRestoreForm() {
   return (

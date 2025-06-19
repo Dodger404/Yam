@@ -1,5 +1,5 @@
-import { MenuCard } from '@/components/ui/cards/menuCard'
-import { Menu } from '@/types/menu'
+import { Menu } from '../../types/menu'
+import { MenuCard } from '../ui/cards/menuCard'
 
 export const MenuList = ({ list }: { list: Menu[] }) => {
   return (

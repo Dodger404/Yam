@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
-import { LogoPC } from '@/components/icons/logoPC'
-import { User } from '@/components/icons/user'
+import { LogoPC } from '../../icons/logoPC'
+import { User } from '../../icons/user'
 
 export default function HeaderLog() {
   return (

@@ -3,9 +3,9 @@
 import { JSX } from 'react'
 import { useRouter } from 'next/router'
 
-import { DiscountIcon } from '@/components/icons/discountIcon'
-import { Star } from '@/components/icons/star'
-import { Restaurant } from '@/types/restaurants'
+import { Restaurant } from '../../../types/restaurants'
+import { DiscountIcon } from '../../icons/discountIcon'
+import { Star } from '../../icons/star'
 
 export const RestaurantCard: ({
   id,

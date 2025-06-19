@@ -3,13 +3,13 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 
-import { getRestaurantList } from '@/api/get-restaurant-list'
-import { RestaurantList } from '@/components/lists/restaurantList'
-import { Filters } from '@/components/ui/filters'
-import Header from '@/components/ui/headers/header'
-import HeaderMobile from '@/components/ui/headers/headerMobile'
-import Tabs from '@/components/ui/tabs'
-import { Restaurant } from '@/types/restaurants'
+import { getRestaurantList } from '../api/get-restaurant-list'
+import { RestaurantList } from '../components/lists/restaurantList'
+import { Filters } from '../components/ui/filters'
+import Header from '../components/ui/headers/header'
+import HeaderMobile from '../components/ui/headers/headerMobile'
+import Tabs from '../components/ui/tabs'
+import { Restaurant } from '../types/restaurants'
 
 export default function MainPage() {
   const [activeTab, setActiveTab] = useState('all')

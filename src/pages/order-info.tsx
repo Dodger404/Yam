@@ -1,9 +1,9 @@
-import OrderDetailsCard from '@/components/orderInfoPage/orderDetailsCard'
-import OrderReviewForm from '@/components/orderInfoPage/orderReviewForm'
-import RepeatOrderButton from '@/components/ui/buttons/repeatOrderButton'
-import Header from '@/components/ui/headers/header'
-import HeaderMobile from '@/components/ui/headers/headerMobile'
-import PageTitleWithBack from '@/components/ui/pageTitleWithBack'
+import OrderDetailsCard from '../components/orderInfoPage/orderDetailsCard'
+import OrderReviewForm from '../components/orderInfoPage/orderReviewForm'
+import RepeatOrderButton from '../components/ui/buttons/repeatOrderButton'
+import Header from '../components/ui/headers/header'
+import HeaderMobile from '../components/ui/headers/headerMobile'
+import PageTitleWithBack from '../components/ui/pageTitleWithBack'
 
 export default function OrderInfoPage() {
   return (

@@ -2,10 +2,9 @@ import Link from 'next/link'
 import { HomeIcon, UserIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 
-import { Car } from '@/components/icons/car'
-import { Chat } from '@/components/icons/chat'
-import { Logo } from '@/components/icons/logo'
-import { Storage } from '@/components/icons/storage'
+import { Car } from '../icons/car'
+import { Chat } from '../icons/chat'
+import { Logo } from '../icons/logo'
 
 type BurgerMenuProps = {
   onClose: () => void
