@@ -6,8 +6,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./src --debug --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint ./src --fix",
     "prettier": "prettier ./src --check --ignore-unknown",
     "prettier:fix": "prettier ./src -w",
     "db:generate": "drizzle-kit generate",
@@ -18,8 +16,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
       "prettier --write"
-    ],
-    "*.js": "node eslintPatch.js && eslint ."
+    ]
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
