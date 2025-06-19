@@ -8,7 +8,7 @@
     "time": "30–40 минут",
     "price": "1 500–2 000 ₽",
     "image": "/images/yaropolk.jpg",
-    "recent": true,
+    "recent": false,
     "favorite":false
   },
   {
@@ -32,8 +32,8 @@
     "time": "25–35 минут",
     "price": "1 200–1 500 ₽",
     "image": "/images/slavicFeast.png",
-    "recent": true,
-    "favorite": true
+    "recent": false,
+    "favorite": false
   },
   {
     "id": "4",
@@ -93,7 +93,7 @@
     "price": "2 000–2 400 ₽",
     "image": "/images/fishArtel.png",
     "recent": false,
-    "favorite": true
+    "favorite": false
   },
   {
     "id": "1",
@@ -104,7 +104,7 @@
     "time": "30–40 минут",
     "price": "1 500–2 000 ₽",
     "image": "/images/yaropolk.jpg",
-    "recent": true,
+    "recent": false,
     "favorite": false
   },
   {
@@ -129,7 +129,7 @@
     "price": "1 200–1 500 ₽",
     "image": "/images/slavicFeast.png",
     "recent": false,
-    "favorite": true
+    "favorite": false
   },
   {
     "id": "4",
@@ -141,7 +141,7 @@
     "price": "1 000–1 400 ₽",
     "image": "/images/birchbarkYard.jpg",
     "recent": false,
-    "favorite": true
+    "favorite": false
   },
   {
     "id": "5",
@@ -164,7 +164,7 @@
     "time": "35–45 минут",
     "price": "1 200–1 800 ₽",
     "image": "/images/teaHouse.png",
-    "recent": true,
+    "recent": false,
     "favorite": false
   },
   {

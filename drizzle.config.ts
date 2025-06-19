@@ -1,4 +1,6 @@
-import { defineConfig } from 'drizzle-kit';
+//import { defineConfig } from 'drizzle-kit';
+
+import { defineConfig } from "next/dist/experimental/testmode/playwright";
 
 export default defineConfig({
   schema: './src/server/db/shema.ts',
