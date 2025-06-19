@@ -1,3 +1,6 @@
+// eslintPatch.js
+require('@rushstack/eslint-patch/lib/index');
+
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
